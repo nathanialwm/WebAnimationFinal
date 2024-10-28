@@ -1,0 +1,101 @@
+<doctype html>
+    <html>
+        <head>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+            <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+            <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+            <link rel="stylesheet" href="home.css">
+            <link rel="stylesheet" href="animate.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+            <script src="color.js"></script>
+            <title>Select Game</title>
+        </head>
+        <body>
+        <section id="allGames">
+            <h1 id="pocket" class="animated lightSpeedIn">Pocket</h1>
+            <h1 id="play" class="animated lightSpeedIn">PLAY</h1>
+            <div id="line"></div>
+            <div id="games">
+                <ul id="gamesList">
+                    <li id="hilolink">High Low</li>
+                    <li id="simonSays">Simon Says</li>
+                    <li id="rock">Rock, Paper, Scissors</li>
+                    <li id="pong">Master Mind</li>
+                </ul>
+            </div>
+        </section>
+        <section id="hiLo">
+            <i class="fa fa-reply fa-3x hiloback">Back</i>
+            <h1 id="guess">Hello, I am thinking of a number between 1 and 100, can you guess it?</h1>
+        <form id="guessanummber">
+            <input type="text" placeholder="Guess a number" name="guessinput" id="guessinput"/>
+            <button type="button" name="submit" id="submitguess">Guess</button>
+            <p id="result"></p>
+            <button type="button" id="playAgain">Yes!</button>
+            <ul id="youKnow"></ul>
+        </form>
+        </section>
+        <section id="simon">
+            <i class="fa fa-reply fa-3x simonback">Back</i>
+            <h1 id="instruct">Match the order the buttons are clicked in</h1>
+            <h1 id="gameover">Game Over</h1>
+            <div id="contain4">
+                    <div id="red"></div>
+                    <div id="green"></div>
+                    <div id="blue"></div>
+                    <div id="yellow"></div>
+            </div>
+            <div id="shadow"></div>
+            <div id="startGame">Begin!<div id="gradient"></div></div>
+        </section>
+        <section id="rockPaper">
+            <i class="fa fa-reply fa-3x rockback">Back</i>
+            <h1 id="instructRock">To begin choose Rock, Paper or Scissors</h1>
+            <div class="row row1">
+                <img src="images/rock.png" class="img-rounded" id="rockImg"/>
+                <img src="images/paper.png" class="img-rounded" id="paperImg"/>
+                <img src="images/scissors.png" class="img-rounded" id="scissorsImg"/>
+            </div>
+            <form id="chooseRPS">
+            <div class="row row2">
+                <input type="radio" id="rockButton" name="choose" value="Rock" />
+                <input type="radio" id="paperButton" name="choose" value="Paper" />
+                <input type="radio" id="scissorsButton" name="choose" value="Scissors" />
+            </div>
+            <input type="submit" name="submit" value="Choose!" id="RPSsubmit"/>
+        </form>
+        <p id="thisTurn"></p>
+        <p id="stats"></p>
+        </section>
+        <section id="danceDance">
+            <i class="fa fa-reply fa-3x pongback">Back</i>
+            <h1 id="instructMaster">I am thinking of a sequence of four colors, guess below</h1>
+            <p id="tries"></p>
+            <div class="row row3">
+                <div id="circle1" data-color="red"></div>
+                <div id="circle2" data-color="red"></div>
+                <div id="circle3" data-color="red"></div>
+                <div id="circle4" data-color="red"></div>
+            </div>
+            <div class="row row4">
+            	<p id="color1"></p>
+            	<p id="color2"></p>
+            	<p id="color3"></p>
+            	<p id="color4"></p>
+            </div>
+            <button type="button" id="masterButton">Submit</button>
+            <p id="whenCorrect"></p>
+            <button type="button" id="playAgainButton">Play Again?</button>
+        </section>
+        <script src="effects.js">
+        </script>
+            <script>
+                $(document).ready(function() {
+                    $('#pocket').delay(1500)
+                    .animate({
+                        top: '14vh'
+                    }, 300);
+                });
+            </script>
+        </body>
+    </html>
